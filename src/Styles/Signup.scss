@@ -1,0 +1,120 @@
+/* Style for the container */
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border:1px solid #ccc ;
+    width: 600px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    // margin: 30px;
+    //margin-top: 6%;
+    margin-right: 0px;
+    // width: 600px;
+    // height: 500px;
+    // padding: 20px;
+    display: flex;
+    border-radius: 5px;
+}
+#name{
+    display: flex;
+    flex-direction: row;
+}
+.container.form.Fname.Lname{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    height: 30px;
+    width: 120px;
+    border-radius: 3px;
+}
+.form.Fname{
+    padding: 10px;
+    margin-left: 15px;
+}
+#pwd{
+    display: flex;
+    flex-direction: row;
+}
+  
+  /* Style for the "Fundo" paragraph */
+  .form.fundo {
+    text-align: left;
+    padding-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e79818;
+    padding-left: 0px;
+  }
+  
+  /* Style for the "txt" paragraph */
+  .form.txt {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Style for the form inputs */
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for the "UserName" info */
+  p.userNameInfo {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* Style for the "Password" info */
+  #passInfo {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+  }
+  
+  /* Style for the sign in buttons */
+  .sign {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sign button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sign button:nth-child(1) {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .sign button:nth-child(2) {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
