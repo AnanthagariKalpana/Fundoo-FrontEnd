@@ -13,10 +13,10 @@ body {
 }
 .container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: auto;
     border:1px solid #ccc ;
-    width: 600px;
+    width: 800px;
     height: 500px;
     padding: 20px;
     border-radius: 5px;
@@ -24,14 +24,24 @@ body {
 .form{
     display: flex;
     flex-direction: column;
-    // margin: 30px;
-    //margin-top: 6%;
     margin-right: 0px;
-    // width: 600px;
+     width: 800px;
     // height: 500px;
     // padding: 20px;
     display: flex;
     border-radius: 5px;
+}
+.right-box{
+  padding: 80px 30px 50px;
+  width: 800px;
+  align-items: left;
+  float: left;
+}
+.logo{
+  display: flex;
+  width: 70%;
+  padding-left: 20px;
+  align-items: center;
 }
 #name{
     display: flex;
@@ -136,10 +146,10 @@ body {
   #text{
     display: flex;
     flex-direction: row;
-    width: 700px;
+    width: 750px;
     height: 450px;
     margin: auto;
     padding-top: 10px;
-    font-size: 10px;
+    font-size: 12px;
 }
   

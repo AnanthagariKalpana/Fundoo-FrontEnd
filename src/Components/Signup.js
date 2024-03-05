@@ -3,10 +3,11 @@ import React from "react";
 import Button from '@mui/material/Button';
 import '../Styles/Signup.scss';
 import TextField from '@mui/material/TextField';
+import logo from '../assets/logo.png';
 
 function Signup() {
     return (
-        <div>
+        <>
             <div className="container">
                 <div className="form">
                     <div>
@@ -33,17 +34,22 @@ function Signup() {
                     
                     <div className="sign">
                         <Button variant='text'>Sign in instead</Button>
-                        <Button variant="contained">Signin</Button>
+                        <Button variant="contained">Register</Button>
                     </div>
                 </div>
+                <div className="right-box">
+                    <img src={logo} className="logo" alt="logo"/>
+                    <p className="msg">One account. All of Fundo working for you</p>
+                </div>
             </div>
+
             <div id='text'>
-                <p style={{ marginRight: '350px', marginLeft: '45px' }}>English(UnitedState)</p>
+                <p style={{ marginRight: '500px', marginLeft: '-20px' }}>English(UnitedState)</p>
                 <p style={{ marginRight: '40px' }}>Help</p>
                 <p style={{ marginRight: '40px' }}>Privacy</p>
                 <p>Terms</p>
             </div>
-        </div>
+        </>
     )
 }
 export default Signup
