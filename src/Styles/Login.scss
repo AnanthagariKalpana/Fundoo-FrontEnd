@@ -1,0 +1,148 @@
+
+body {
+    font-family:sans-serif;
+    margin:0;
+    padding: 0;
+  }
+
+// .Log {
+//     flex-direction: column;
+//     text-align: center;
+//     width: 300px;
+//     height: auto;
+//     margin: 100px auto;
+//     padding: 30px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     border-width: thin;
+//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+// }
+// .fundo{
+//     font-size: 20px;
+//     padding-top: 10px;
+//     margin: auto;
+//     text-align: center;
+//     font-weight: bold;
+//     color: rgb(228, 94, 16)
+// }
+// .sign-txt{
+//     text-align: center;
+//     margin-top: 10px;
+//     margin-bottom: auto;
+//     font-weight: 400;
+//     font-size: 18px;
+// }
+// .txt{
+//     font-size: 16px;
+//     margin-top: 10px;
+//     text-align: center;
+//     font-weight: 100;
+//     font-style: initial;
+// }
+// .email-txt{
+//     display: flex;
+//     flex-direction: column;
+//     padding: 5px;
+//     gap: 20px;
+// }
+// .pwd-txt{
+//     display: flex;
+//     flex-direction: column;
+//     padding: 5px;
+//     gap: 100px;
+// }
+// .Log.forgot-pwd{
+//     font-size: 1px;
+//     text-transform: none;
+//     padding-left: 1px;
+// }
+// .button{
+//     display:flex;
+//     padding: 5px;
+//     margin-top: 10px;
+//     padding-left: 1px;
+//     justify-content: space-between;
+// }
+.Log {
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+   .fundo {
+    padding-top: 10px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e56b0e;
+  }
+  
+   .sign-txt {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: auto;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  
+  .Log .text {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .Log form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Log input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .Log .button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Log .forgot-pwd {
+    font-size: 12px;
+    color: #5e4ae7;
+    text-decoration: underline;
+    background: none;
+    padding-left: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .button{
+    display:flex;
+    padding: 5px;
+    margin-top: 10px;
+    padding-left: 1px;
+    justify-content: space-between;
+}
+  
+//   .Log .button Button {
+//     flex: 1;
+//     margin: 10px;
+//   }
+  
+//   .Log .button Button:nth-child(1) {
+//     margin-right: 5px;
+//   }
+  
+//   .Log .button Button:nth-child(2) {
+//     margin-left: 5px;
+//   }
+  
