@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 import './App.css';
+import Login from './Components/Login';
+import Signup from './Components/Signup';
+import Dashboard from './Components/Dashboard';
+import NotesContainer from './Components/NotesContainer';
+import ArchiveContainer from './Components/ArchiveContainer';
+import TrashContainer from './Components/TrashContainer';
 
 function App() {
-  return (
 
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const routeConfig= createBrowserRouter([
+  {
+    path:"/",
+    element:<Login/>
+  },
+  {
+    path:"/signup",
+    element:<Signup/>
+  },
+  {
+    path:"/dashboard",
+    element:<Dashboard/>,
+
+    children: [
+      {
+        path:"notes",
+        element:<NotesContainer/>
+      },
+      {
+        path:"archive",
+        element:<ArchiveContainer/>
+      },
+      {
+        path:"trash",
+        element:<TrashContainer/>
+      }
+    ]
+  }
+])
+  return (
+  <RouterProvider router={routeConfig}></RouterProvider>
     
   );
 }

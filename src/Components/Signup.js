@@ -4,8 +4,32 @@ import Button from '@mui/material/Button';
 import '../Styles/Signup.scss';
 import TextField from '@mui/material/TextField';
 import logo from '../assets/logo.png';
-
+import { useNavigate } from 'react-router-dom';
+import { SignupApi } from "../utils/UserService";
 function Signup() {
+
+    let userName="";
+    let password="";
+
+    const navigate= useNavigate();
+    const handleNavigation=()=>{
+        navigate("/");
+    }
+    // const setuserName=(e)=>{
+    //     userName=e.target.value;
+    // }
+    // const setpassword=(e)=>{
+    //     password=e.target.value;
+    // }
+    const handleSignup=async ()=>{
+        const signupPlayLoad={
+            userName:userName,
+            password:password
+        }
+        const res=await SignupApi(signupPlayLoad);
+        console.log(res);
+        navigate("/")
+    }
     return (
         <>
             <div className="container">
@@ -15,10 +39,10 @@ function Signup() {
                         <p className="txt">Create your Fundo Account</p>
                     </div>
 
-                    <div id="name">
+                     <div id="name">
                         <TextField className="Fname" label="FirstName" type="text" placeholder="Fisrt Name*" /><br />
                         <TextField className="Lname" label="LatName" type="text" placeholder="Last Name*" />
-                    </div>
+                    </div> 
                     <div className="username">
                         <TextField className="Uname" label="UserName" type="text" placeholder="User Name*" />
                         <p className="userNameInfo">You can use letters, numbers & periods</p>
@@ -33,8 +57,8 @@ function Signup() {
                     </div>
                     
                     <div className="sign">
-                        <Button variant='text'>Sign in instead</Button>
-                        <Button variant="contained">Register</Button>
+                        <Button variant='text'onClick={handleNavigation}>Sign in instead</Button>
+                        <Button variant="contained" onClick={handleSignup}>Register</Button>
                     </div>
                 </div>
                 <div className="right-box">

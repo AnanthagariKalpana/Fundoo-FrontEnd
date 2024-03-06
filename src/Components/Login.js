@@ -4,6 +4,7 @@ import '../Styles/Login.scss';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { LoginApi } from '../utils/UserService';
+import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
@@ -14,16 +15,25 @@ function Login() {
     //emailregex checks the format of email
     const emailRegex =  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
 
+    // const [passwordError, setpassword]=useState(false);
+    // const passwordRegex=/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+    const navigate= useNavigate();
+
+    const handleNavigation=()=>{
+        navigate("/signup");
+    }
+
     const handleLogin=async ()=>{
-        debugger
         console.log(userName, password);
        setUserNameError(!emailRegex.test(userName))
+      // setpassword(!passwordRegex.test(password))
         const loginPayload={
             email:userName,
             password:password
         }
         console.log(loginPayload);
        const data= await LoginApi(loginPayload);
+       navigate("/dashboard/notes")
         console.log(data);
     }
 
@@ -42,10 +52,11 @@ function Login() {
             <TextField label="password" 
             onChange={(e)=>password=e.target.value}
             />
+            {/* {passwordError && <span>password is incorrect</span>} */}
                  
                 <Button variant='text' className='forgot-pwd'>forgot password</Button>
                 <div className='button'>
-                <Button variant='text'>create account</Button>
+                <Button variant='text'onClick={handleNavigation}>create account</Button>
                 <Button variant="contained" onClick={handleLogin}>Login</Button>
                 </div>
             {/* <div id='text'>
