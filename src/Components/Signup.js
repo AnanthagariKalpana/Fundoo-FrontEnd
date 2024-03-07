@@ -6,8 +6,11 @@ import TextField from '@mui/material/TextField';
 import logo from '../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
 import { SignupApi } from "../utils/UserService";
-function Signup() {
 
+
+function Signup() {
+    let fName="";
+    let lName="";
     let userName="";
     let password="";
 
@@ -15,15 +18,23 @@ function Signup() {
     const handleNavigation=()=>{
         navigate("/");
     }
-    // const setuserName=(e)=>{
-    //     userName=e.target.value;
-    // }
-    // const setpassword=(e)=>{
-    //     password=e.target.value;
-    // }
+    const setfName = (e)=>{
+        fName = e.target.value;
+      }
+    
+      const setlName = (e)=>{
+        lName = e.target.value;
+      }
+    const setuserName=(e)=>{
+        userName=e.target.value;
+    }
+    const setpassword=(e)=>{
+        password=e.target.value;
+    }
     const handleSignup=async ()=>{
         const signupPlayLoad={
-            userName:userName,
+            name:`${fName} ${lName}`,
+            email:userName,
             password:password
         }
         const res=await SignupApi(signupPlayLoad);
@@ -40,18 +51,18 @@ function Signup() {
                     </div>
 
                      <div id="name">
-                        <TextField className="Fname" label="FirstName" type="text" placeholder="Fisrt Name*" /><br />
-                        <TextField className="Lname" label="LatName" type="text" placeholder="Last Name*" />
+                        <TextField className="Fname" label="FirstName" type="text" placeholder="Fisrt Name*" required onChange={setfName}/><br />
+                        <TextField className="Lname" label="LatName" type="text" placeholder="Last Name*" required onClick={setlName}/>
                     </div> 
                     <div className="username">
-                        <TextField className="Uname" label="UserName" type="text" placeholder="User Name*" />
+                        <TextField className="Uname" label="UserName" type="text" placeholder="User Name*" required onChange={setuserName}/>
                         <p className="userNameInfo">You can use letters, numbers & periods</p>
                     </div>                
                     
                     <div className="pwd">
                         <div className="pwd-1">
-                        <TextField type="text" label="Password" placeholder="password*" />
-                        <TextField type="text" label="confirm" placeholder="confirm*" />
+                        <TextField type="text" label="Password" placeholder="password*" required/>
+                        <TextField type="text" label="confirm" placeholder="confirm*" required onChange={setpassword}/>
                         </div>
                         <p id="passInfo">Use 8 or more characters with a mix of letters, numbers & symbols</p>
                     </div>

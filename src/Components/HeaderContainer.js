@@ -3,14 +3,8 @@ import React from "react";
 import icon from '../assets/icon.png'
 import '../Styles/header.scss';
 import {
-    AppBar,
-    Toolbar,
-    Typography,
     IconButton,
-    InputBase,
     Badge,
-    //   Menu,
-    //  MenuItem,
 } from "@mui/material";
 
 import AppsIcon from '@mui/icons-material/Apps'
@@ -19,7 +13,9 @@ import MenuIcon from '@mui/icons-material/Menu';
  import SettingsIcon from '@mui/icons-material/Settings';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-function HeaderContainer() {
+
+const HeaderContainer=(toggleDrawer, currentState)=> {
+
     return (
 
         <div  className="head-container">

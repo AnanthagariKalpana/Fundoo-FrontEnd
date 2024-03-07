@@ -1,0 +1,46 @@
+
+.c-div{
+    display: flex;
+    justify-content: center;
+}
+
+
+.main-div{
+    width: 50%;
+    border: 2px solid rgb(200, 190, 190);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+  
+.takeNote-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title-div{
+    width: 100%;
+}
+
+.title-txt{
+    width: 400px;
+}
+
+.close-div{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.icons{
+    display: flex;
+    gap: 10px;
+    
+
+}
+.close-btn{
+    border: none;
+    background-color: white;
+    justify-content: end;
+    justify-content: space-between;
+}

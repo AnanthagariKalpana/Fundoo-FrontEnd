@@ -1,0 +1,17 @@
+
+.main{
+    //align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border: 2px solid rgb(204, 196, 196);
+    width: 250px;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}

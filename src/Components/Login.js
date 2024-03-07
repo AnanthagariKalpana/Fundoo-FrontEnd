@@ -31,10 +31,13 @@ function Login() {
             email:userName,
             password:password
         }
-        console.log(loginPayload);
        const data= await LoginApi(loginPayload);
+       const token = data.data.user;
+       localStorage.setItem("token", token);
+
+       console.log(data.data.user);
        navigate("/dashboard/notes")
-        console.log(data);
+        
     }
 
     return (

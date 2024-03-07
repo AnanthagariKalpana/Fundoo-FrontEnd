@@ -1,53 +1,119 @@
-body{
-    padding: 0;
-    margin: 0;
-}
-.head-container{
-    //width: 900px;
-    width: 100vw;
-    height: auto;
-    display: flex;
-    position: static;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid rgb(192, 184, 184);
-}
-.menu{
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    margin-left: 20px;
-}
-.head-cnt1{
-    display: flex;
-    align-items: center;
-    margin-right: 5%;
-}
-.head-cont2{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+// body{
+//     padding: 0;
+//     margin: 0;
+// }
+// .head-container{
+//     //width: 900px;
+//     width: 100vw;
+//     height: auto;
+//     display: flex;
+//     position: fixed;
+//     align-items: center;
+//     justify-content: space-between;
+//     border-bottom: 2px solid rgb(192, 184, 184);
+//     top:0;
+//     left: 0;
+//     z-index: 1000;
+// }
+// .menu{
+//     display: flex;
+//     align-items: center;
+//     margin-right: 10px;
+//     margin-left: 20px;
+// }
+// .head-cnt1{
+//     display: flex;
+//     align-items: center;
+//     margin-right: 5%;
+// }
+// .head-cont2{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
 
-.head-img{
+// .head-img{
+//     display: flex;
+//     align-items: center;
+//     margin-right: 20px;
+//     margin-left: 20px;
+//     width: 25px;
+//     height: auto;
+// }
+// .head-search{
+//     display: flex;
+//     align-items: center;
+//     margin-right: 380px;
+//     margin-left: -95px;
+
+// }
+// .icon-search{
+//     display: flex;
+//     align-items: center;
+//     width: 550px;
+//     border: none;
+
+// }
+
+.head-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .head-cnt1 {
     display: flex;
     align-items: center;
+  }
+  
+  .menu {
     margin-right: 20px;
-    margin-left: 20px;
-    width: 25px;
-    height: auto;
-}
-.head-search{
+  }
+  
+  .head-cont2 {
     display: flex;
     align-items: center;
-    margin-right: 380px;
-    margin-left: -95px;
-
-}
-.icon-search{
+  }
+  
+  .head-img {
+    width: 40px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    margin-right: 10px;
+  }
+  
+  .head-search {
     display: flex;
     align-items: center;
-    width: 550px;
+    margin-right: 50px;
+  }
+  
+  .icon-search {
+    display: flex;
+    align-items: center;
+    margin-right: 150px;
+  }
+  
+  input[type="text"] {
+    width: 200px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    padding: 8px;
+    border-radius: 5px;
     border: none;
-
-}
+    outline: none;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icons .MuiButtonBase-root {
+    margin-left: 10px;
+  }
+  
