@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import icon from '../assets/icon.png'
 import '../Styles/header.scss';
 import {
@@ -13,16 +13,36 @@ import MenuIcon from '@mui/icons-material/Menu';
  import SettingsIcon from '@mui/icons-material/Settings';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useNavigate } from "react-router-dom";
 
-const HeaderContainer=(toggleDrawer, currentState)=> {
+
+function HeaderContainer({state, setState}) {
+
+    const navigate = useNavigate();
+
+  const [anchorMenu, setAnchorMenu] = useState(null);
+  const openOption = Boolean(anchorMenu);
+  const userPopper = openOption ? "simple-popper" : undefined;
+
+  const handleToggle = () => {
+    setState(!state);
+  }
+  const handleMenu = (userPopper) => {
+    setAnchorMenu(anchorMenu ? null : userPopper.currentTarget);
+  };
+
+  const handleSignOut = ()=>{
+    localStorage.clear();
+    navigate("/signin")
+  }
 
     return (
 
         <div  className="head-container">
 
             <div className="head-cnt1" >
-                <div className="menu">
-                <MenuIcon />
+                <div className="menu" onClick={handleToggle}>
+                <MenuIcon className="menu-icon"/>
                 </div>
                 <div className="head-cont2" >
                     <img src={icon} alt="icon" className="head-img"/>

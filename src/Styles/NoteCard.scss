@@ -10,8 +10,23 @@
     gap: 20px;
     padding: 10px;
 }
-.icons{
+.card-icons{
     display: flex;
     justify-content: space-between;
     padding: 0px 10px;
+    gap: 10px;
+}
+.action-list
+{
+    width: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(200, 198, 198);
+    background-color: white;
+    gap: 10px;
+    p{
+        margin: 0px;
+    }
 }

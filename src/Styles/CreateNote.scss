@@ -9,7 +9,7 @@
     width: 50%;
     border: 2px solid rgb(200, 190, 190);
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow:  2px 4px rgba(42, 41, 41, 0.1);
     
 }
   
@@ -25,6 +25,10 @@
 
 .title-txt{
     width: 400px;
+    font-size: 20px;
+}
+.note-txt{
+    font-size: 15px;
 }
 
 .close-div{
@@ -32,11 +36,15 @@
     justify-content: space-between;
     padding: 10px 20px;
 }
-.icons{
+.icons-list{
+    width: 90%;
     display: flex;
-    gap: 10px;
+    justify-content: space-evenly;
     
+}
 
+.icons-div{
+    width: 70%;
 }
 .close-btn{
     border: none;

@@ -28,10 +28,10 @@ const routeConfig= createBrowserRouter([
         path:"notes",
         element:<NotesContainer/>
       },
-      {
-        path:"create",
-        element:<CreateNote/>
-      },
+      // {
+      //   path:"create",
+      //   element:<CreateNote/>
+      // },
       {
         path:"archive",
         element:<ArchiveContainer/>
