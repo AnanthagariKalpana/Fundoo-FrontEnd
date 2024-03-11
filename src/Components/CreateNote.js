@@ -28,8 +28,6 @@ const CreateNote = ({ updateNotesList }) => {
     }
 
     const handleNote = async () => {
-
-
         if (noteTitle.trim() || noteDescription.trim()) {
             const data = {
                 title: noteTitle,
@@ -39,13 +37,6 @@ const CreateNote = ({ updateNotesList }) => {
             }
             const res = await createNote(data);
             updateNotesList({operation:"add",data:res.data.data})
-            // setNote();
-            // updateNote(res.data);
-            // // Clear the input fields after saving
-            // setNoteTitle("");
-            // setNoteDescription("");
-            // setIsArchived(false);
-            // setNoteColor("#ffffff");
         }
     };
     const handleArchive = () => {

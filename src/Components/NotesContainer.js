@@ -21,12 +21,9 @@ function NotesContainer() {
     if (operation === "add") {
       setNoteList([data, ...notesList])
     }
-    else if (operation === "archive") {
+    else if (operation === "archive" || operation === "trash") {
       const filterList = notesList.filter((ele)=> ele._id!==data);
       setNoteList(filterList)
-    }
-    else if (operation === "trash") {
-
     }
   }
 
