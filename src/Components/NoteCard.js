@@ -12,7 +12,7 @@ import '../Styles/NoteCard.scss'
 import ListItemIcon from '@mui/material/ListItemIcon';
 import UnarchiveOutlinedIcon from '@mui/icons-material/UnarchiveOutlined';
 import { archiveNote, deleteNote, trashNote, updateNote } from '../utils/NoteService';
-
+import EditNote from "./EditNote";
 
 function NoteCard({ note, updateNotesList, trash = false, cont = false }) {
     const [anchorMenu, setAnchorMenu] = useState(null);
@@ -21,9 +21,10 @@ function NoteCard({ note, updateNotesList, trash = false, cont = false }) {
     const openColor = Boolean(anchorColor);
     const colorPopper = openColor ? "simple-popper" : undefined;
     const eventPopper = openOption ? "simple-popper" : undefined;
-    const [open, setOpen] = useState(false);
+    const [openEditNote, setOpenEditNote] = useState(false);
     const id = note._id
-    
+    let Title = note.title, Description = note.description
+
     //const [currentColor, setCurrentColor] = useState(note.color || "#FFFFFF");
 
 
@@ -38,10 +39,10 @@ function NoteCard({ note, updateNotesList, trash = false, cont = false }) {
         }
         if (action === "color") {
             //setCurrentColor(col);
-            let color=note.color;
-            color=col;
+            let color = note.color;
+            //color=col;
             console.log(id);
-            await updateNote(id, {color:col})
+            await updateNote(id, { color: col })
             updateNotesList({ operation: "color", data: { ...note, color: col } })
 
         }
@@ -59,7 +60,16 @@ function NoteCard({ note, updateNotesList, trash = false, cont = false }) {
         setAnchorColor(anchorColor ? null : colorPopper.currentTarget);
     };
     const handleClickOpen = () => {
-        setOpen(true);
+        setOpenEditNote(!openEditNote);
+    };
+
+    const [open, setOpen] = React.useState(false);
+    const [selectedValue, setSelectedValue] = useState();
+
+
+    const handleClose = (value) => {
+        setOpen(false);
+        setSelectedValue(value);
     };
 
 
@@ -117,6 +127,14 @@ function NoteCard({ note, updateNotesList, trash = false, cont = false }) {
                         </ListItemIcon>
                     </div>)
                 )}
+
+            <EditNote
+            open={openEditNote}
+            id={id} Title={Title} Description={Description}
+                selectedValue={selectedValue}
+                onClose={setOpenEditNote} updateNotesList={updateNotesList}
+            />
+
 
             <Popper id={eventPopper} open={openOption} anchorEl={anchorMenu}>
                 <div className="action-list">

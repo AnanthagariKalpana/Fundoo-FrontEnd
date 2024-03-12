@@ -25,7 +25,7 @@ function NotesContainer() {
       const filterList = notesList.filter((ele)=> ele._id!==data);
       setNoteList(filterList)
     }
-    else if(operation === "color")
+    else if(operation === "color" || operation === "edit")
     {
       const filterList=notesList.map(ele=>{
         if(ele._id === data._id)
@@ -45,6 +45,7 @@ function NotesContainer() {
         .map((note) => 
         <NoteCard note={note} updateNotesList={updateNotesList} cont="archive" />
         )}</div>
+        
 
     </div>
   )
