@@ -6,7 +6,6 @@ import Dashboard from './Components/Dashboard';
 import NotesContainer from './Components/NotesContainer';
 import ArchiveContainer from './Components/ArchiveContainer';
 import TrashContainer from './Components/TrashContainer';
-import CreateNote from './Components/CreateNote';
 
 function App() {
 

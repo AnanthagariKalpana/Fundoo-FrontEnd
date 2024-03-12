@@ -1,4 +1,4 @@
-//import { Accordion, AccordionDetails, AccordionSummary, Button, Grid, IconButton, TextField, Menu } from '@mui/material';
+
 import React, { useState } from 'react';
 import { createNote } from '../utils/NoteService';
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
@@ -17,7 +17,6 @@ const CreateNote = ({ updateNotesList }) => {
     const [noteTitle, setNoteTitle] = useState(" ");
     const [noteDescription, setNoteDescription] = useState("");
     const [isArchived, setIsArchived] = useState(false);
-    const [anchorEl, setAnchorEl] = useState(null);
     const [noteColor, setNoteColor] = useState("#ffffff");
 
 
@@ -58,7 +57,8 @@ const CreateNote = ({ updateNotesList }) => {
                                 <input className="title-txt" type='text' placeholder='Title' onChange={(e) => setNoteTitle(e.target.value)} />
                             </div>
                             <div className='desc-div'>
-                                <input type='text' className="note-txt" placeholder='Take a Note' onChange={(e) => setNoteDescription(e.target.value)} /></div>
+                                <input type='text' className="note-txt" placeholder='Take a Note...'onChange={(e) => setNoteDescription(e.target.value)}/>
+                            </div>
                             <div className='close-div'>
                                 <div className='icons-div'>
                                     <ListItemIcon className='icons-list'>
@@ -85,60 +85,6 @@ const CreateNote = ({ updateNotesList }) => {
                 </div>
             </div>
         </>
-        // <Accordion>
-        //   <AccordionSummary>
-        //     <div>
-        //     <TextField
-        //     placeholder='Title'
-        //       value={noteTitle}
-        //       fullWidth
-        //       onChange={(e) => setNoteTitle(e.target.value)}
-
-        //     />
-        //     </div>
-        //   </AccordionSummary>
-        //   <AccordionDetails className='note-details'>
-        //     <div className='note-cnt'>
-        //       <TextField
-        //         placeholder='Take a Note.....'
-        //         multiline
-        //         fullWidth
-        //         value={noteDescription}
-        //         onChange={(e) => setNoteDescription(e.target.value)}
-        //         margin='none'
-        //       />
-        //       <Grid
-        //       container
-        //       justifyContent="space-between"
-        //       alignItems="center"
-        //       >
-        //         <Grid item>
-        //             <IconButton onClick={(e)=>(setAnchorEl(e.currentTarget))}>
-        //                 <ColorLens/>
-        //             </IconButton>
-        //             <Menu
-        //             anchorEl={anchorEl}
-        //             open={Boolean(anchorEl)}
-        //             onClose={() => setAnchorEl(null)}
-        //             style={{ display: "flex" }}
-        //           >
-        //           </Menu>
-        //           <IconButton>
-        //             <Image/>
-        //           </IconButton>
-        //           {!isArchived && (
-        //             <IconButton onClick={handleArchive}>
-        //               <Archive />
-        //             </IconButton>
-        //           )}
-        //         </Grid>
-        //     <Button onClick={handleNote} className='note-button'>
-        //       Close
-        //     </Button>
-        //     </Grid>
-        //     </div>
-        //   </AccordionDetails>
-        // </Accordion>
     );
 }
 
